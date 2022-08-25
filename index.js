@@ -31,7 +31,7 @@ function Bird() {
 let daffy = new Bird();
 console.log(daffy.getWeight());
 
-let funMixin = (function () {
+let funModule = (function () {
   return {
     isCuteMixin: function (obj) {
       obj.isCute = function () {
@@ -46,7 +46,7 @@ let funMixin = (function () {
   };
 })();
 
-funMixin.isCuteMixin(daffy);
+funModule.isCuteMixin(daffy);
 console.log(daffy.isCute());
-funMixin.singMixin(daffy);
+funModule.singMixin(daffy);
 daffy.sing();
